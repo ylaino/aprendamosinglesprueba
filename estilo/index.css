@@ -82,7 +82,7 @@ img {
 
 /*INDEX*/ 
 #portada {
-  background: linear-gradient( rgba(20, 20, 20, 0), rgba(20, 20, 20, 0)), url(/Imagenes/biblioteca.jpg);
+  background: linear-gradient( rgba(20, 20, 20, 0), rgba(20, 20, 20, 0)), url(..//Imagenes/biblioteca.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
