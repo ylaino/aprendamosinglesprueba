@@ -12,7 +12,7 @@ header { position: sticky;
 
 .container {display: flex;
   flex-direction: row;
-  background-color: rgb(0, 38, 77);  
+  background-color:#724370;
   z-index: 2; 
   text-align: center;
   justify-content: flex-end;
@@ -36,10 +36,19 @@ display: flex;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
+  /*transition: all 1s;*/
 } 
 
+.nav__link:hover {
+  color: rgb(241, 241, 241);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 body {
-  background-color: rgb(117, 193, 208);
+  background-color: rgba(117, 193, 208, 0.229);
   margin: 0;
 }
 
@@ -152,7 +161,7 @@ max-height: 50rem;} */
 .table__title {
   grid-column-start: 1;
   grid-column-end: 4;
-  background-color: rgb(117, 193, 208);
+  background-color:  rgba(117, 193, 208, 0.229);
   color: black;
   display: flex;
   justify-content: center;
@@ -200,7 +209,7 @@ padding-bottom: 1.5rem;
   margin-bottom: 3rem;
 }
 
-h3 {color: rgb(77, 6, 143);
+h3 {color: rgb(50, 4, 93);
 text-align: justify;}
 
 
@@ -217,8 +226,8 @@ text-align: justify;}
   background-color: rgb(146, 220, 233);
   font-size: 1.5rem;
   border-radius: 30px;
- 
-}
+  }
+
 .clases__titulo {
   padding:0 ;
   margin: 1rem;
@@ -231,10 +240,14 @@ text-align: justify;}
   padding-bottom: 1rem;
 }
 
+.clases__box {
+  background-image: linear-gradient(to left bottom, #bb6bd1, #ad7adb, #a086e2, #9592e6, #8c9ce8, #6eacf6, #47bbfd, #00c9fd, #00dfef, #00f0c7, #8afa90);
+}
+
 footer {
-  -webkit-box-shadow: 0px -5px 9px 1px rgba(0,0,0,0.55); 
-  box-shadow: 0px -5px 9px 1px rgba(198,251,143,0.55);
-  background-color:#976194;
+ /* -webkit-box-shadow: 0px -3px 4px 1px rgba(0,0,0,0.55); 
+  box-shadow: 0px -3px 4px 1px rgba(38, 39, 38, 0.55);*/
+  background-color:#724370;
   color: #81F2D0;
   font-weight: 600;
   margin-top: 2rem;
@@ -258,14 +271,21 @@ footer {
   margin-left: 3rem;
 }
 
+
 .fab {
   text-align: center;
   margin-left: 2rem;
-  font-size: 2rem;
-  background: linear-gradient(#F9F871, #7FE8E3);
+  font-size: 350%;
+  background: linear-gradient(#cfcf20, #7FE8E3);
   -webkit-background-clip: text;
   color: transparent;  
   
+}
+
+.fab:hover {
+  background: linear-gradient(#f6f6f4, #e87fda);
+  -webkit-background-clip: text;
+  color: transparent; 
 }
 
 .footer__bottom {text-align: right;
@@ -319,8 +339,8 @@ width: 100%;
   align-content: center;
   justify-content: center;
   align-items: center;
-  
   }
+
 .imagen__corazon {
   width: 40rem;
   margin-left: 2rem;
