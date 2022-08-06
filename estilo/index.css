@@ -6,8 +6,9 @@
 }
 /*BARRA DE NAVEGACIÓN*/ 
 
-header { position: sticky;
+header { /* position: sticky;*/
   top: 0%;
+  width: 100%;
 }
 
 .container {display: flex;
@@ -47,18 +48,31 @@ display: flex;
   font-weight: bolder;
 }
 
+.nav__link:active {
+  text-decoration: underline;
+}
+
+
+
 body {
   background-color: rgba(117, 193, 208, 0.229);
   margin: 0;
 }
 
-img {  
-  border-radius: 30px;
+
+#logo { 
+border-radius: 0%;
+margin-right: 20%;
+max-width: 20%;
+
 }
+
 
 .imagen {
   width: 30rem;
-  border-radius: 30px;}
+  border-radius: 30px;
+  max-width: 100%;
+  }
 
 .imagenProfe {
   width: 60%; 
@@ -82,7 +96,7 @@ img {
 
 /*INDEX*/ 
 #portada {
-  background: linear-gradient( rgba(20, 20, 20, 0), rgba(20, 20, 20, 0)), url(..//Imagenes/biblioteca.jpg);
+  background: linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, 0)), url(..//Imagenes/biblioteca.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,6 +147,42 @@ img {
   align-items: center;
   align-content: flex-end;
   }
+
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  background-color: white;
+}
+.opciones__card {
+  display: flex;
+  flex: 0.5 8 200px;
+  flex-direction: row;
+  
+  text-align: center;
+}
+
+.divv {
+  flex-direction: row;
+  text-align: left;
+  align-self: center;
+}
+
+h4 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.opciones__imagen {
+  align-self: center;
+  max-width: 50%;
+}
 
 
 /* #grilla {
@@ -198,7 +248,8 @@ max-height: 50rem;} */
 
 
 
-p {padding: 1rem;}
+p {padding: 1rem;
+}
 
 h2 {color: rgb(44, 6, 78);
 text-align: center;
@@ -210,21 +261,25 @@ padding-bottom: 1.5rem;
 }
 
 h3 {color: rgb(50, 4, 93);
-text-align: justify;}
+text-align: justify;
+line-height: 1.6;
+}
 
 
 .grid {display: grid;
   grid-template-columns: 1fr 0.5rem 1fr;
-  grid-gap: 0.5rem;}
+  grid-gap: 0.5rem;
+}
 
 .row {display: flex;}
+
 .clases {
   margin: 4rem;
   max-width: 90%;
-  padding: 3rem;
+  padding: 2.5rem;
   border: solid black;
   background-color: rgb(146, 220, 233);
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 30px;
   }
 
@@ -233,11 +288,13 @@ text-align: justify;}
   margin: 1rem;
   font-size: 3rem;
   font-weight: bolder;
-  text-align: center;}
+  text-align: center;
+}
 
 .clases__contenido {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .clases__box {
@@ -305,9 +362,6 @@ padding: 2rem;}
   padding: 5px 5px 5px 5px ;
 }
 
-img {
-  max-width: 100%;}
-
 
 /* PÁGINA DE CONTACTO */
 
@@ -316,8 +370,14 @@ img {
 display: flex;
 flex-direction: column;
 justify-content: center;
+align-items: center;
 font-size: 2rem;
 width: 100%;
+margin-top: 5%;
+}
+
+.contacto__formulario {
+  background-color: white;
 }
 
 .boton {
@@ -341,10 +401,7 @@ width: 100%;
   align-items: center;
   }
 
-.imagen__corazon {
-  width: 40rem;
-  margin-left: 2rem;
- }
+
 
 /* GRID AREAS */
 
@@ -355,6 +412,7 @@ header {
 #grilla { 
   grid-area: contenido;
   }
+  
 footer {
   grid-area: footer;
 }
@@ -439,6 +497,15 @@ footer {
 
 /* MEDIA QUERIES */
 
+
+@media (max-width:900px) {
+  #logo { 
+    border-radius: 0%;
+    max-width: 5%;
+    }
+}
+
+
  @media (max-width:768px) {
 .grid-structure {
   grid-template-columns: 1fr;
@@ -473,7 +540,8 @@ footer {
 .info { 
   text-align: justify;
   align-items: center;
-  align-content: center}
+  align-content: center;
+}
 
 .grid {
   grid-template-columns: 1fr;
@@ -488,7 +556,8 @@ footer {
   flex-direction: column;
   }
 
-.conteiner_table {
+
+ .conteiner_table {
   width: 90%;
   margin: 2rem auto;
   display: grid;
@@ -506,4 +575,19 @@ footer {
 .table__title {
   font-size: 1.5rem;
 }
+
+#logo {
+  display: none;
+}
+
+.imagen__corazon {
+  width: 20rem;
+  justify-content: center;
+  justify-self: center;
+  margin-left: 0;
  }
+
+ footer {font-weight: 400;
+  font-size: 0.5rem;
+ }
+}
